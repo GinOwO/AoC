@@ -1,0 +1,129 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.py",
+            "args": [
+                "<",
+                "${fileDirname}/input.txt"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Current File(No Input)",
+            "type": "python",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "C++: Current File",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "args": [
+                "<",
+                "${fileDirname}/input.txt"
+            ],
+            "preLaunchTask": "Build C++",
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    //"ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    //"ignoreFailures": true
+                }
+            ],
+        },
+        {
+            "name": "C++: Current File(No Input)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "preLaunchTask": "Build C++",
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+        },
+        {
+            "name": "Python: All Tests",
+            "type": "node",
+            "preLaunchTask": "Run All Py",
+            "program": "/usr/bin/bash",
+            "args": [
+                "./scripts/runAllPy.sh",
+                "${fileDirname}",
+                "0"
+            ],
+            "request": "launch",
+        },
+        {
+            "name": "Python: All Tests(Time)",
+            "type": "node",
+            "preLaunchTask": "Run All Time Py",
+            "program": "/usr/bin/bash",
+            "args": [
+                "./scripts/runAllPy.sh",
+                "${fileDirname}",
+                "1"
+            ],
+            "request": "launch",
+        },
+        {
+            "name": "C++: All Tests",
+            "type": "node",
+            "preLaunchTask": "Run All Cpp",
+            "program": "/usr/bin/bash",
+            "args": [
+                "./scripts/runAllCpp.sh",
+                "${fileDirname}",
+                "0"
+            ],
+            "request": "launch",
+            "postDebugTask": "Cleanup Cpp"
+        },
+        {
+            "name": "C++: All Tests(Time)",
+            "type": "node",
+            "preLaunchTask": "Run All Time Cpp",
+            "program": "/usr/bin/bash",
+            "args": [
+                "./scripts/runAllCpp.sh",
+                "${fileDirname}",
+                "1"
+            ],
+            "request": "launch",
+            "postDebugTask": "Cleanup Cpp"
+        }
+
+    ]
+}
