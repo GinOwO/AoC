@@ -50,6 +50,7 @@
                     //"ignoreFailures": true
                 }
             ],
+            "postDebugTask": "Cleanup Cpp"
         },
         {
             "name": "C++: Current File(No Input)",
@@ -73,6 +74,7 @@
                     "ignoreFailures": true
                 }
             ],
+            "postDebugTask": "Cleanup Cpp"
         },
         {
             "name": "Python: All Tests",
@@ -109,7 +111,6 @@
                 "0"
             ],
             "request": "launch",
-            "postDebugTask": "Cleanup Cpp"
         },
         {
             "name": "C++: All Tests(Time)",
@@ -122,7 +123,6 @@
                 "1"
             ],
             "request": "launch",
-            "postDebugTask": "Cleanup Cpp"
         }
 
     ]
